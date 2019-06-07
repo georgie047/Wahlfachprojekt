@@ -6,3 +6,5 @@ For the project you need the USART configured:
   - Data bits= 8
   - Stop bits= 1
   - Parity = none
+  
+To Generate a Random Number or a Key the Datazone must be locked 
