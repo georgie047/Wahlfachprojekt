@@ -62,34 +62,6 @@ int main (void)
 	system_init();
 	configureUsart();
 
-	/*
-	port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-	status = atcab_init(&cfg_ateccx08a_i2c_default);
-	
-	if(status == ATCA_SUCCESS){
-		port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
-	}
-	status = atcab_wakeup();
-	if(status != ATCA_SUCCESS){
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-	}
-	*/
-
-	/*delay_s(1);
-	status = atcab_read_serial_number(sernum);
-
-
-	if(status != ATCA_SUCCESS){
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-	}
-	uint8_t data[] = {0x41,0x42,0x43,0x44};
-	uint8_t hash[32] = {0x00};
-	status = atcab_hw_sha2_256(data, sizeof(data), hash);
-
-	if(status != ATCA_SUCCESS){
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-	}
-	*/
 	while (1) {
 		menu();
 	}
@@ -214,9 +186,9 @@ void ateccx08a_menu (void){
 
 while(!changeMenu){
 	usartClearWindow();
-	strcpy(string, "ATSHA204A Menu                        \n\r");
+	strcpy(string, "ATECCx08A Menu                        \n\r");
 	usartWriteBuffer(string, sizeof(string));
-	strcpy(string, "1) Get Serial number of ATSHA204A Chip\n\r");
+	strcpy(string, "1) Get Serial number of ATECCx08  Chip\n\r");
 	usartWriteBuffer(string, sizeof(string));
 	strcpy(string, "2) Check if device is locked          \n\r");
 	usartWriteBuffer(string, sizeof(string));
