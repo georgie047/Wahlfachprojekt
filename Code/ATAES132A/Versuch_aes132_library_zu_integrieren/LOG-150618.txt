@@ -1,0 +1,8 @@
+(0c 00 00 06 00 00)                                                                    
+TX buffer = 0x09 0C 00 00 06 00 00 A9 E7               
+RX buffer = 0x06 00 0A 05 44 1E
+
+(10 00 00 00 00 04)
+TX buffer = 0x09 10 00 00 00 00 04 09 99
+RX buffer = 0x08 00 55 AA BC DE C6 D7 
+  
